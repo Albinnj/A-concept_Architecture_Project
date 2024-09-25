@@ -1,0 +1,653 @@
+/* UNIVERSAL STYLES */
+
+:root {
+    --primary-background-color: rgba(0, 0, 0, 0.8);
+    --primary-text-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    height: 100%;
+}
+
+section {
+    padding-top: 126px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* FONTS */
+
+h1 {
+    font-size: 31.5px;
+    margin-bottom: 9px;
+}
+
+h2 {
+    font-size: 27px;
+    letter-spacing: 1px;
+    margin-bottom: 27px;
+    margin-left: 18px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 22.5px;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* FONTS - MOBILE */
+
+@media only screen and (max-width: 768px) {
+    
+    h1 {
+        font-size: 22.5px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    background-color: var(--primary-background-color);
+    width: 100%;
+    height: 90px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.logo {
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 36px;
+    line-height: 90px;
+    padding-left: 27px;
+}
+
+.bold {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.light {
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.navigation ul {
+    float: right;
+}
+
+.navigation ul li {
+    display: inline-block;
+    line-height: 90px;
+    padding-right: 27px;
+    transition: all .5s;
+}
+
+.navigation ul li:hover {
+    transform: scale(1.1);
+}
+
+.menu-button,
+.close-button {
+    display: none;
+}
+
+/* HEADER - MOBILE */
+
+@media only screen and (max-width: 1080px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation ul {
+        position: fixed;
+        background-color: #222;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 15;
+        transition: all .75s;
+    }
+
+    .navigation ul.active {
+        top: 0;
+    }
+
+    .navigation ul li {
+        line-height: 72px;
+        padding: 0;
+    }
+
+    .menu-button {
+        display: block;
+        color: var(--primary-text-color);
+        padding-right: 27px;
+        z-index: 20;
+        cursor: pointer;
+    }
+
+    .menu-button.active {
+        display: none;
+    }
+
+    .close-button.active {
+        display: block;
+        color: var(--primary-text-color);
+        position: absolute;
+        top: 27px;
+        right: 27px;
+        z-index: 25;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-button,
+    .close-button {
+        font-size: 13.5px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    
+    .light {
+        display: none;
+    }
+
+}
+
+/* BANNER */
+
+.banner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.banner-box.current {
+    opacity: 1;
+}
+
+.banner-box .banner-description {
+    position: absolute;
+    bottom: 72px;
+    left: -450px;
+    width: 450px;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    padding: 27px;
+    opacity: 0;
+}
+
+.banner-box.current .banner-description {
+    opacity: 1;
+    transform: translateX(450px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.banner-box .banner-description p {
+    font-size: 18px;
+}
+
+.banner-box:first-child {
+    background-image: url('../images/the-broad-web.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box:nth-child(2) {
+    background-image: url('../images/oslo-opera-house-web.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box:nth-child(3) {
+    background-image: url('../images/maat-museum-web.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box:nth-child(4) {
+    background-image: url('../images/the-oculus-web.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box:nth-child(5) {
+    background-image: url('../images/rock-and-roll-web.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Hero Section */
+  .section.hero {
+    background: linear-gradient(to right, #2f2a32, #b9d3ff);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .hero-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .btn-primary {
+    background-color: #000000;
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+
+.arrows button {
+    border: none;
+    background-color: transparent;
+    color: #222;
+    z-index: 5;
+    cursor: pointer;
+    outline: none;
+}
+
+.arrows button:hover {
+    color: var(--primary-text-color);
+}
+
+.arrows button#next {
+    position: absolute;
+    top: 50%;
+    right: 27px;
+    transform: translateY(-50%);
+}
+
+.arrows button#prev {
+    position: absolute;
+    top: 50%;
+    left: 27px;
+    transform: translateY(-50%);
+}
+
+/* BANNER - MOBILE */
+
+@media only screen and (max-width: 768px) {
+
+    .banner-box .banner-description {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+        padding: 22.5px;
+    }
+
+    .banner-box.current .banner-description {
+        transform: translateY(-300px);
+    }
+
+}
+
+/* ABOUT */
+
+.about-container {
+    padding: 9px 18px;
+}
+
+.about-container p {
+    line-height: 27px;
+}
+
+/* TEAM */
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 9px;
+}
+
+.team-box {
+    display: flex;
+    align-items: flex-end;
+    border: 9px solid #fff;
+    height: 504px;
+    text-align: center;
+}
+
+.team-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    width: 100%;
+    padding: 18px 9px;
+}
+
+#principal-architect {
+    background-image: url("../images/Architectural.jpeg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+#gallery-architect {
+    background-image: url("../images/int.jpeg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+#interior-designer {
+    background-image: url("../images/interior-designer-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+#architectural-designer {
+    background-image: url("../images/architectural-designer-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+/* TEAM - MOBILE */
+
+@media only screen and (max-width: 1080px) {
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+    .team-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* workS */
+ 
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 9px;
+}
+
+.work-box {
+    display: flex;
+    border: 9px solid #fff;
+    width: 300px;
+    height: 396px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.work-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .75s ease-in-out;
+}
+
+.work-box:hover .work-description {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#club-2100 {
+    background-image: url("../images/2100-club-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#swiss-museum {
+    background-image: url("../images/swiss-national-museum-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#square-tower {
+    background-image: url("../images/constitution-square-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#le-stella {
+    background-image: url("../images/le-stella-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#la-tourette {
+    background-image: url("../images/sainte-marie-de-la-tourette-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#shanghai-baoye {
+    background-image: url("../images/shanghai-baoye-center-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* galleryS - MOBILE */
+
+@media only screen and (max-width: 540px) {
+
+    .gallery-description {
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 1;
+    }
+
+}
+
+/* CONTACT */
+
+.contact {
+    padding-bottom: 126px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 9px;
+}
+
+.contact-box {
+    display: flex;
+    border: 9px solid #fff;
+    width: 360px;
+    height: 648px;
+    flex-grow: 1;
+}
+
+.contact-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.contact-information h3,
+.contact-information p {
+    padding-bottom: 9px;
+}
+
+#interior-office {
+    background-image: url("../images/interior-office-web.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-information:hover {
+    opacity: 0;
+}
+
+input[type=text],
+select,
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13.5px;
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4.5px;
+    margin-top: 9px;
+    margin-bottom: 18px;
+    resize: vertical;
+}
+
+textarea {
+    height: 269px;
+}
+  
+input[type=submit] {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #98c1d9;
+    color: #000;
+    padding: 9px 27px;
+    border: none;
+    border-radius: 4.5px;
+    cursor: pointer;
+    font-size: 13.5px;
+    transition: all 0.75s ease;
+}
+  
+input[type=submit]:hover {
+    background-color: #3d5a80;
+    color: #fff;
+}
+
+/* CONTACT - MOBILE */
+
+@media only screen and (max-width: 768px) {
+    
+    .contact-box {
+        height: 540px;;
+    }
+
+    textarea {
+        height: 161px;
+    }
+      
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #222;
+    color: var(--primary-text-color);
+    padding: 27px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: underline;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>A-Concept Architecture</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <nav class="navigation">
+            <div class="logo">
+                <a href="#home">
+                    <span class="bold">a-concept</span>
+                    <span class="light1">architecture</span>
+                    <span class="light2">studio</span>
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#about">about</a>
+                </li>
+                <li>
+                    <a href="#team">team</a>
+                </li>
+                <li>
+                    <a href="#work">project</a>
+                </li>
+                <li>
+                    <a href="#interior-office">contact</a>
+                </li>
+                <li>
+                    <a href="manage.php" class="login-button">login</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-button">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+        <div class="close-button">
+            <i class="fas fa-times fa-2x"></i>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+
+    <div id="home" class="banner">
+        <div class="banner-box current">
+            <div class="banner-description">
+                <h1>Dining Area</h1>
+                
+            </div>
+        </div>
+        <div class="banner-box">
+            <div class="banner-description">
+                <h1>Work Space</h1>
+                
+            </div>
+        </div>
+        <div class="banner-box">
+            <div class="banner-description">
+                <h1>Sitout</h1>
+                
+            </div>
+        </div>
+        <div class="banner-box">
+            <div class="banner-description">
+                <h1>Outdoor</h1>
+                
+            </div>
+        </div>
+        <div class="banner-box">
+            <div class="banner-description">
+                <h1>Wash Area</h1>
+                
+            </div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <a href="https://wa.me/+918086464622?text=Hello! I'm looking for an Architecture services. Would A-Concept Architecture be available for a consultation?" target="_blank">
+            <img src="./resources/images/whatsapp.png" alt="WhatsApp">
+
+        <a href="https://www.instagram.com/_a_concept_architecturestudio_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <img src="./resources/images/instagram.png" alt="Instagram">
+        </a>
+    </div>
+
+    </div>
+    <div class="arrows">
+        <button id="prev" aria-label="previous">
+            <i class="fas fa-angle-left fa-2x"></i>
+        </button>
+    </div>
+    <div class="arrows">
+        <button id="next" aria-label="next">
+            <i class="fas fa-angle-right fa-2x"></i>
+        </button>
+    </div>
+
+    <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="hero" >
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">A-Concept Architecture</p>
+
+            <h1 class="h1 hero-title">We are available for Crafting Architectural Masterpieces</h1>
+
+            <p class="hero-text">
+                We blend modern design with timeless principles, ensuring each gallery is a unique masterpieces
+
+            </p>
+
+            <a href="https://wa.me/+918086464622?text=Hello! I'm looking for an Architecture services. Would A-Concept Architecture be available for a consultation?" class="btn btn-primary">Contact Us</a>
+
+          </div>
+        </div>
+      </section>
+
+    <!-- ABOUT -->
+    
+    <section id="about" class="about"  style="background-image: url('./resources/images/line.jpg');">
+        <h2>about us</h2>
+        <div class="about-container">
+            <p>Founded by the visionary architect Amal Benny, A-Concept Architecture Studio is a leading firm in Wayanad, Kerala, dedicated to crafting innovative and sustainable architectural solutions. We believe in seamlessly blending modern design aesthetics with the rich cultural heritage of Kerala, creating spaces that are both beautiful and functional. 
+
+                Our team of passionate and experienced architects is committed to exceeding client expectations. We offer a comprehensive range of architectural services, including residential, commercial, and sustainable design, ensuring your vision is realized with meticulous planning and execution. We are dedicated to creating spaces that enhance lives, inspire communities, and leave a lasting legacy in Wayanad.</p>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    
+    <section id="team" class="team"  style="background-image: url('./resources/images/line.jpg');">
+        <h2>Our services</h2>
+        <div class="team-container", onclick="openWhatsApp()">
+            <div class="team-box" id="principal-architect">
+                <div class="team-description", onclick="openWhatsApp()">
+                    <h3>Architecture</h3>
+                    <p>Architecture is the art of creating beautiful and functional spaces</p>
+                </div>
+            </div>
+            <div class="team-box" id="gallery-architect">
+                <div class="team-description", onclick="openWhatsApp()">
+                    <h3 >Interior Design</h3>
+                    <p>Interior design makes spaces both beautiful and functional</p>
+                </div>
+            </div>
+            <div class="team-box" id="interior-designer">
+                <div class="team-description", onclick="openWhatsApp()">
+                    <h3> Landscaping</h3>
+                    <p> Landscaping services create beautiful outdoor spaces</p>
+                </div>
+            </div>
+            <div class="team-box" id="architectural-designer">
+                <div class="team-description", onclick="openWhatsApp()">
+                    <h3>Home Renovation</h3>
+                    <p>Home renovation transforms houses into dream homes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- projectS -->
+    
+    <section id="work" class="work" style="background-image: url('./resources/images/line.jpg');">
+        <h2>selected projects</h2>
+        <div class="work-container">
+            <div class="work-box" id="club-2100">
+                <div class="work-description">
+                    <h3>Breakfast Counter</h3>
+                
+                </div>
+            </div>
+            <div class="work-box" id="swiss-museum">
+                <div class="work-description">
+                    <h3>Dining Space</h3>
+                    
+                </div>
+            </div>
+            <div class="work-box" id="square-tower">
+                <div class="work-description">
+                    <h3>Bed Room</h3>
+                    
+                </div>
+            </div>
+            <div class="work-box" id="le-stella">
+                <div class="work-description">
+                    <h3>Indoor Courtyard</h3>
+                    
+                </div>
+            </div>
+            <div class="work-box" id="la-tourette">
+                <div class="work-description">
+                    <h3>Wash Area</h3>
+                    
+                </div>
+            </div>
+            <div class="work-box" id="shanghai-baoye">
+                <div class="work-description">
+                    <h3>Outdoor Landscape</h3>
+                    
+                </div>
+            </div>
+        </div>
+        <a href="gallery.php" class="btn btn-view">View More</a>
+    </section>
+
+    <!-- CONTACT -->
+    
+            </div>
+            <div class="contact-box" id="interior-office" >
+                <div class="contact-information">
+                    <h3>A-Concept Architecture Studio</h3>
+                    <p>+918086464622</p>
+                    <p>aconceptarchitecturestudio@gmail.com</p>
+                    <p>Wayanad,Kerala</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>&copy;2024 A-Concept Architecture Studio All rights reserved.</p>
+    </footer>
+    
+    <script src="./resources/js/script.js"></script>
+
+</body>
+</html>
